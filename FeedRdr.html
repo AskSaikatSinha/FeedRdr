@@ -1,0 +1,48 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="main.js"></script>
+<link rel='stylesheet' type='text/css' href="main.css"/>
+</head>
+<body>
+  <div id="header">
+    <form name=time>
+<input type=text name=tfield size=44><br>
+<p style="float:right">Current Time:<iframe src="http://free.timeanddate.com/clock/i5but3gv/n553" frameborder="0" width="115" height="18"></iframe>
+</p>
+
+</form>
+
+<script type="text/javascript">
+pageOpen = new Date(); function ctck() {
+var sds = document.getElementById("dum");
+ } document.onload="ctck()";
+function leavingPage() {
+pageClose =new Date(); hours=pageClose.getHours()-pageOpen.getHours(); minutes=pageClose.getMinutes()-pageOpen.getMinutes(); seconds=pageClose.getSeconds()-pageOpen.getSeconds(); time = (seconds + (minutes * 60) + (hours * 60 * 60)); if(time<60){ document.time.tfield.value="Time Spent By You In This Site " + time + " seconds"; } else { min=(parseInt(time/60)); sec=(time%60); document.time.tfield.value="Time Spent By You In This Site " + min + " minutes " + sec + " seconds"; } } function timer() { leavingPage(); setTimeout('timer()',1000) } document.onload=timer(); </script>
+<div style="font-size: 10px;color: #dadada;" id="dumdiv"> </div>
+
+
+  </div>
+  <div id="container">
+<div id="home" class="feed">
+</div>
+  <div id="web-news" class="feed">
+	</div>
+  <div id="programming" class="feed">
+	</div>
+
+  <div id="design" class="feed">
+	</div>
+
+
+  <script>
+    $(document).ready(function() {
+      initialize();
+    });
+  </script>
+
+</div>
+</body>
+</html>
